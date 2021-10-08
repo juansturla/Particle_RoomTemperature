@@ -2,22 +2,21 @@
     x:Class="Particle_RoomTemperature.AllMeasurementsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:model="clr-namespace:Particle_RoomTemperature.Models"
-    xmlns:vm="clr-namespace:Particle_RoomTemperature.ViewModels"
-    x:DataType="vm:AllMeasurements_ViewModel"
     BackgroundColor="{DynamicResource SecondaryColor}">
-    <CollectionView ItemsSource="{Binding Measurements}">
-        <CollectionView.ItemTemplate>
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding Measurements}" BackgroundColor="Green">
+            <CollectionView.ItemTemplate>
             <DataTemplate>
-                <HorizontalStackLayout x:DataType="model:Measurement">
+                <StackLayout BackgroundColor="Gray">
                     <Label Text="{Binding Temperature}" />
                     <Label Text="{Binding Humidity}" />
                     <Label Text="{Binding DateTime}" />
                     <Label Text="{Binding TemperatureVariation}" />
                     <Label Text="{Binding HumidityVariation}" />
-                </HorizontalStackLayout>
+                </StackLayout>
             </DataTemplate>
-
         </CollectionView.ItemTemplate>
-    </CollectionView>
+
+        </CollectionView>
+        </StackLayout>
 </ContentPage>

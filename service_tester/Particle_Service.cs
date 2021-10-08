@@ -23,7 +23,7 @@ namespace Particle_RoomTemperature.Services
             ObservableCollection<Measurement> measurements = new ObservableCollection<Measurement>();
             string[] tempMeasurements = GetTemperatureMeasurements().Split(';');
             string[] humidMeasurements = GetHumidityMeasurements().Split(';');
-            DateTime dateTime = DateTime.Now;
+            DateTime dateTime = new DateTime();
             dateTime = dateTime.AddMinutes(dateTime.Minute);
             dateTime = dateTime.AddSeconds(dateTime.Second);
 
