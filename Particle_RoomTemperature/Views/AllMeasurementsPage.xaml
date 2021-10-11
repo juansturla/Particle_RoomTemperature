@@ -2,21 +2,25 @@
     x:Class="Particle_RoomTemperature.AllMeasurementsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Particle_RoomTemperature.Converters"
     BackgroundColor="{DynamicResource SecondaryColor}">
-    <StackLayout>
-        <CollectionView ItemsSource="{Binding Measurements}" BackgroundColor="Green">
+    <ContentPage.Resources>
+        <converters:VariationToImage x:Key="variationToImage"/>
+    </ContentPage.Resources>
+        <CollectionView ItemsSource="{Binding Measurements}" BackgroundColor="Gray">
             <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout BackgroundColor="Gray">
-                    <Label Text="{Binding Temperature}" />
-                    <Label Text="{Binding Humidity}" />
-                    <Label Text="{Binding DateTime}" />
-                    <Label Text="{Binding TemperatureVariation}" />
-                    <Label Text="{Binding HumidityVariation}" />
-                </StackLayout>
+                <Grid ColumnDefinitions="*,*,2,*,*" RowDefinitions="*,2*,2">
+
+                    <Label Text="{Binding DateTime}" GridLayout.ColumnSpan="2" />
+                    <Label FontSize="Title" Text="{Binding Temperature, StringFormat='{0:F1}°C' }" GridLayout.Row="1" HorizontalTextAlignment="End"/>
+                    <Image Source="{Binding TemperatureVariation, Converter={StaticResource variationToImage}}" GridLayout.Row="1" GridLayout.Column="1"/>
+                    <BoxView GridLayout.Column="2" GridLayout.RowSpan="3" Color="Black"/>
+                    <Label FontSize="Title" Text="{Binding Humidity, StringFormat='{0:F1}' }" GridLayout.Row="1" GridLayout.Column="3" HorizontalTextAlignment="End" />
+                    <Image Source="{Binding TemperatureVariation, Converter={StaticResource variationToImage}}" GridLayout.Row="1" GridLayout.Column="4"/>
+                    <BoxView GridLayout.Row="2" GridLayout.ColumnSpan="5" Color="Black"/>
+                </Grid>                
             </DataTemplate>
         </CollectionView.ItemTemplate>
-
         </CollectionView>
-        </StackLayout>
 </ContentPage>

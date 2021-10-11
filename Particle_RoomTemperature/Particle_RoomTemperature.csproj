@@ -63,6 +63,12 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Converters\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Converters\" />
+	</ItemGroup>
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
 		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
