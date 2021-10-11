@@ -13,10 +13,10 @@
                 <Grid ColumnDefinitions="*,*,2,*,*" RowDefinitions="*,2*,2">
 
                     <Label Text="{Binding DateTime}" GridLayout.ColumnSpan="2" />
-                    <Label FontSize="Title" Text="{Binding Temperature, StringFormat='{0:F1}°C' }" GridLayout.Row="1" HorizontalTextAlignment="End"/>
+                    <Label FontSize="Title" Text="{Binding Temperature, StringFormat='{0:F1}°C' }" GridLayout.Row="1" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
                     <Image Source="{Binding TemperatureVariation, Converter={StaticResource variationToImage}}" GridLayout.Row="1" GridLayout.Column="1"/>
                     <BoxView GridLayout.Column="2" GridLayout.RowSpan="3" Color="Black"/>
-                    <Label FontSize="Title" Text="{Binding Humidity, StringFormat='{0:F1}' }" GridLayout.Row="1" GridLayout.Column="3" HorizontalTextAlignment="End" />
+                    <Label FontSize="Title" Text="{Binding Humidity, StringFormat='{0:F1}' }" GridLayout.Row="1" GridLayout.Column="3" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                     <Image Source="{Binding TemperatureVariation, Converter={StaticResource variationToImage}}" GridLayout.Row="1" GridLayout.Column="4"/>
                     <BoxView GridLayout.Row="2" GridLayout.ColumnSpan="5" Color="Black"/>
                 </Grid>                

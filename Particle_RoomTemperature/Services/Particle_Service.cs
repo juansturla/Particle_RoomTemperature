@@ -37,14 +37,14 @@ namespace Particle_RoomTemperature.Services
                 dateTime = dateTime.AddHours(-1);
                 if (lastMeasurement!=null)
                 {
-                    if (newMeasurement.Humidity > newMeasurement.Humidity)
+                    if (newMeasurement.Humidity > lastMeasurement.Humidity)
                         newMeasurement.HumidityVariation = Variation.HIGHER;
-                    if (newMeasurement.Humidity < newMeasurement.Humidity)
+                    if (newMeasurement.Humidity < lastMeasurement.Humidity)
                         newMeasurement.HumidityVariation = Variation.LOWER;
 
-                    if (newMeasurement.Temperature > newMeasurement.Temperature)
+                    if (newMeasurement.Temperature > lastMeasurement.Temperature)
                         newMeasurement.HumidityVariation = Variation.HIGHER;
-                    if (newMeasurement.Temperature < newMeasurement.Temperature)
+                    if (newMeasurement.Temperature < lastMeasurement.Temperature)
                         newMeasurement.TemperatureVariation = Variation.LOWER;
                 }
                     lastMeasurement = newMeasurement;
