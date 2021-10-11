@@ -43,7 +43,7 @@ namespace Particle_RoomTemperature.Services
                         newMeasurement.HumidityVariation = Variation.LOWER;
 
                     if (newMeasurement.Temperature > lastMeasurement.Temperature)
-                        newMeasurement.HumidityVariation = Variation.HIGHER;
+                        newMeasurement.TemperatureVariation = Variation.HIGHER;
                     if (newMeasurement.Temperature < lastMeasurement.Temperature)
                         newMeasurement.TemperatureVariation = Variation.LOWER;
                 }
