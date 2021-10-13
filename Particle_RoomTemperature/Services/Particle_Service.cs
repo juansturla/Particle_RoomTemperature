@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Particle_RoomTemperature.Models;
 
 namespace Particle_RoomTemperature.Services
