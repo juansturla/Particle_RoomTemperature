@@ -1,6 +1,8 @@
 # Proyecto Particle Room Temperature [Spanish]
 
-Este es una aplicación de IoT con [.NET MAUI](https://github.com/dotnet/maui) para medir la Temperatura y Humedad relativa de la habitación.
+Este es una aplicación de IoT con [.NET MAUI](https://github.com/dotnet/maui) para medir la Temperatura y Humedad relativa de la habitación y como varían estos valores con las mediciones anteriores.
+
+![App Screenshot v1](images/App_Screenshot.png)
 
 Este repositorio es un complemento del blog [Pollitos de Maui](https://pollitosdemaui.wordpress.com/)
 
@@ -33,7 +35,9 @@ La manera más sencilla de tener .NET 6 Preview es instalar [Visual Studio 2022 
 
 # Particle Room Temperature Project  [English]
 
-This is a [.NET MAUI](https://github.com/dotnet/maui) IoT application to measure Room Temperature and Relative Humidity.
+This is a [.NET MAUI](https://github.com/dotnet/maui) IoT application to measure Room Temperature and Relative Humidity and how these values vary.
+
+![App Screenshot v1](images/App_Screenshot.png)
 
 This is a complement of the blog [Pollitos de Maui](https://pollitosdemaui.wordpress.com/)
 
