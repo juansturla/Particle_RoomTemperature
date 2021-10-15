@@ -29,6 +29,8 @@ La manera más sencilla de tener .NET 6 Preview es instalar [Visual Studio 2022 
 
 ## El circuito [EN PROCESO]
 
+![Circuit](images/sketch.png)
+
 ------------
 
 ------------
@@ -63,3 +65,5 @@ The easiest way to get .NET 6 Preview is to install [Visual Studio 2022 Preview]
 * An Micro-USB cable
 
 ## The circuit [IN PROGRESS]
+
+![Circuit](images/sketch.png)
