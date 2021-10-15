@@ -12,11 +12,6 @@ namespace Particle_RoomTemperature.Services
 {
     public static class Particle_Service
     {
-        public static List<Measurement> GetSomeList()
-        {
-            return new List<Measurement>() { new Measurement() { Temperature = 1, Humidity = 1, DateTime = DateTime.Now } };
-        }
-
         public static ObservableCollection<Measurement> GetRoomMeasurements()
         {
             ObservableCollection<Measurement> measurements = new ObservableCollection<Measurement>();
@@ -56,16 +51,10 @@ namespace Particle_RoomTemperature.Services
 
         static string GetTemperatureMeasurements()
         {
-#if DEBUG
-            return "24.0;24.0;23.0;24.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;24.0;24.0;24.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;22.0;22.0;22.0;22.0;22.0;22.0;22.0;23.0;22.0;23.0;23.0;23.0;23.0;23.0;23.0;24.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;22.0;22.0;22.0;22.0;22.0;22.0;22.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;23.0;24.0;24.0;24.0;23.0;24.0;24.0;24.0;25.0;25.0;24.0;24.0;24.0;24.0;24.0;24.0;24.0;24.0;23.0;24.0;24.0;24.0;24.0;";
-#endif
             return Task.Run(() => GetParticleVariable("last_temps")).Result;
         }
         static string GetHumidityMeasurements()
         {
-#if DEBUG
-            return "42.0;42.0;42.0;42.0;43.0;42.0;42.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;42.0;42.0;41.0;41.0;41.0;43.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;44.0;41.0;41.0;41.0;41.0;41.0;41.0;40.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;41.0;42.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;41.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;42.0;43.0;43.0;43.0;44.0;49.0;47.0;48.0;47.0;48.0;49.0;48.0;52.0;56.0;51.0;51.0;51.0;50.0;50.0;49.0;49.0;49.0;48.0;48.0;48.0;49.0;49.0;49.0;";
-#endif
             return Task.Run(() => GetParticleVariable("last_humids")).Result;
         }
         static async Task<string> GetParticleVariable(string particleVariable)
